@@ -1,0 +1,26 @@
+FUNCTION is_Palindrome(STR:STRING ,i,j) : BOOLEAN
+VAR
+    
+    BOL:=TRUE:BOOLEAN
+   
+BEGIN
+    IF (i<j) THEN
+        IF (STR[i]==STR[j]) THEN
+        is_Palidrome(STR,i+1,j-1)
+        ELSE BOL:=FALSE;
+        END_IF
+    END_IF
+    RETURN BOL
+  
+END
+ALGORITHM algorithm_name
+VAR
+    n:= STR.length
+    i:=0;
+    j:=n;
+BEGIN
+    is_Palindrome(STR,i,j);
+    IF BOL= TRUE;
+    THEN write("the word is a palindrome")
+    ELSE write("the word is not a palindrome")
+END
